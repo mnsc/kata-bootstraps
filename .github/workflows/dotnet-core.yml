@@ -25,12 +25,12 @@ jobs:
 
     - name: Install dependencies
       working-directory: csharp/dotnet-core
-      run: dotnet restore **/*.csproj
+      run: dotnet restore dotnet-core.sln
       
     - name: Build
       working-directory: csharp/dotnet-core
-      run: dotnet build --configuration Release --no-restore **/*.csproj
+      run: dotnet build --configuration Release --no-restore dotnet-core.sln
       
     - name: Test
       working-directory: csharp/dotnet-core
-      run: dotnet test --no-restore --verbosity normal **/*.csproj
+      run: dotnet test --no-restore --verbosity normal
